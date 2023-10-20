@@ -1,0 +1,63 @@
+{
+  "name": "puppeteer-extra-plugin-devtools",
+  "version": "2.4.6",
+  "description": "Make puppeteer browser debugging possible from anywhere (devtools with screencasting on the internet).",
+  "main": "index.js",
+  "repository": "berstend/puppeteer-extra",
+  "author": "berstend",
+  "license": "MIT",
+  "scripts": {
+    "docs": "node -e 0",
+    "lint": "eslint --ext .js .",
+    "test-ava": "ava --fail-fast -v",
+    "test": "run-p lint test-ava",
+    "test-ci": "run-s test"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "puppeteer",
+    "puppeteer-extra",
+    "puppeteer-extra-plugin",
+    "devtools",
+    "devtools-tunnel",
+    "localtunnel",
+    "remote-debugging",
+    "chrome",
+    "headless",
+    "pupeteer"
+  ],
+  "devDependencies": {
+    "ava": "2.4.0",
+    "npm-run-all": "^4.1.5",
+    "puppeteer": "^2.0.0",
+    "puppeteer-extra": "^3.3.6"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "get-port": "^3.2.0",
+    "got": "^8.3.1",
+    "http-auth": "^3.2.3",
+    "http-proxy": "^1.17.0",
+    "http-proxy-response-rewrite": "^0.0.1",
+    "localtunnel": "^2.0.0",
+    "ow": "^0.4.0",
+    "puppeteer-extra-plugin": "^3.2.3",
+    "randomstring": "^1.1.5",
+    "url-parse": "^1.5.3"
+  },
+  "peerDependencies": {
+    "playwright-extra": "*",
+    "puppeteer-extra": "*"
+  },
+  "peerDependenciesMeta": {
+    "puppeteer-extra": {
+      "optional": true
+    },
+    "playwright-extra": {
+      "optional": true
+    }
+  },
+  "gitHead": "39248f1f5deeb21b1e7eb6ae07b8ef73f1231ab9"
+}

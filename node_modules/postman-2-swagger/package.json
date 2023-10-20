@@ -1,0 +1,62 @@
+{
+  "name": "postman-2-swagger",
+  "version": "0.5.0",
+  "description": "Postman collections to swagger",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rm -rf lib && babel src/ -d lib/ --ignore '**/*.spec.js'",
+    "compile:watch": "nodemon -x 'npm run build'",
+    "coverage-shield": "coverage-shield",
+    "test": "jest",
+    "eslint": "lint-staged",
+    "git-add": "git add ."
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "postman",
+    "api",
+    "docs",
+    "swagger",
+    "converter"
+  ],
+  "author": "mrphlai@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "babel-eslint": "^7.1.2",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.1.0",
+    "jest-coverage-shield": "^1.1.0",
+    "lint-staged": "^7.2.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.13.7"
+  },
+  "lint-staged": {
+    "*.js, *.jsx": [
+      "eslint --fix"
+    ]
+  },
+  "precommit": [
+    "eslint",
+    "test",
+    "coverage-shield",
+    "git-add"
+  ],
+  "peerDependencies": {
+    "lodash": "^4.17.11"
+  },
+  "dependencies": {
+    "postman-collection": "^3.4.5"
+  }
+}

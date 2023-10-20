@@ -1,0 +1,54 @@
+{
+  "name": "uuid-apikey",
+  "version": "1.5.3",
+  "description": "A Base32-Crockford encoded API Key generator, validator, and converter to turn UUIDs into human readable API Keys",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "nyc mocha",
+    "build": "gulp",
+    "fix": "gulp fix",
+    "lint": "gulp lint",
+    "coverage": "nyc --reporter=lcov mocha && cat ./coverage/lcov.info | codacy-coverage",
+    "pretty": "gulp pretty"
+  },
+  "bin": {
+    "apiKeyTool": "bin/apiKeyTool.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chronosis/uuid-apikey.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "uuid",
+    "apikey",
+    "human-readable"
+  ],
+  "author": "chronosis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chronosis/uuid-apikey/issues"
+  },
+  "homepage": "https://github.com/chronosis/uuid-apikey#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "codacy-coverage": "^3.2.0",
+    "eslint": "^7.11.0",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-mocha": "^8.0.0",
+    "gulp-prettier": "^3.0.0",
+    "mocha": "^9.0.2",
+    "nyc": "^15.1.0",
+    "prettier": "^2.1.2"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "commander": "^8.0.0",
+    "encode32": "^1.1.0",
+    "uuid": "^8.3.1"
+  }
+}

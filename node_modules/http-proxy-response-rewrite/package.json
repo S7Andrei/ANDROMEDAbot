@@ -1,0 +1,36 @@
+{
+  "name": "http-proxy-response-rewrite",
+  "version": "0.0.1",
+  "description": "Rewrite the response body from http-proxy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -R spec ./test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saskodh/http-proxy-response-rewrite.git"
+  },
+  "keywords": [
+    "http-proxy",
+    "streaming",
+    "json"
+  ],
+  "authors": [
+    "Sashe Klechkovski <sasko_dh@hotmail.com>",
+    "XianFa Lang <xianfalang@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saskodh/http-proxy-response-rewrite/issues"
+  },
+  "homepage": "https://github.com/saskodh/http-proxy-response-rewrite#readme",
+  "dependencies": {
+    "bufferhelper": "^0.2.1",
+    "concat-stream": "^1.5.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "http-proxy": "^1.13.3",
+    "mocha": "^2.5.3"
+  }
+}
